@@ -9,6 +9,7 @@ import Shop from './pages/Shop';
 import './App.css'
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
+import Contact from './pages/Contact';
 
 const App = ()=> {
     return (
@@ -27,9 +28,9 @@ const App = ()=> {
                 <Route path='/checkout'>
                     <Checkout />
                 </Route>
-                {/*<Route path='/cart'>
-                    <Cart />
-                </Route> */}
+                <Route path='/contact'>
+                    <Contact />
+                </Route>
             </Switch>
            
             {/* <Footer /> */}

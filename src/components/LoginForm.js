@@ -9,20 +9,16 @@ const LoginForm=({submitForm})=> {
     })
 
     const [errors, setErrors] = useState({})
-    const [dataIsCorrect, setDataIsCorrect] = useState(false)
+    const [setDataIsCorrect] = useState(false)
 
     const handleFormSubmit=(event)=>{
         event.preventDefault()
+        setSubmitted(true)
         setErrors(Validation(values))
-        setDataIsCorrect(true)
+        
     }
-    useEffect (()=>{
-        //if no error and data is correct
-        if(Object.keys(errors).length === 0 && dataIsCorrect){
-           submitForm(true);
-        } 
-      }, [errors])
-
+    const [submitted, setSubmitted] = useState(false)
+   
     const handleChange = (event)=>{
         setValues({
             ...values,
@@ -36,7 +32,8 @@ const LoginForm=({submitForm})=> {
                 <div>
                     <h2 className='form-title'>Create Account</h2>
                 </div>
-                <form className='form-wrapper'>
+                <form className='form-wrapper' onSubmit={handleFormSubmit} >
+                    {submitted ? <div className='form-message'>Account created!</div> : null}
                     <div className='form-name'>
                         <label className='label'>Full Name</label>
                         <input  className='input' type='text' name='fullname' value={values.fullname} onChange={handleChange}/>

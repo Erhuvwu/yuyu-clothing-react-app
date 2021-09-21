@@ -25,6 +25,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
   }
+  /* menuItem component */
   .menu-item{
       min-width: 30%;
       height: 240px;
@@ -35,15 +36,18 @@
       border: 1px solid black;
       margin: 0 7.5px 15px;
       overflow: hidden;
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
   .menu-item:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
-.menu-item.background-image{
+.background-image:hover{
+    cursor: pointer;
   transform: scale(1.1);
-  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  /* transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95); */
 }
-.menu-item.content{
+.content:hover{
     opacity: 0.9;
 }
  
@@ -64,7 +68,7 @@
 
   }
   .content{
-      height: 90px;
+      height: 80px;
       padding: 0 25px;
       display: flex;
       flex-direction: column;
@@ -77,13 +81,14 @@
   }
   .title{
       font-weight: bold;
-      margin-bottom: 6px;
+      margin-top: 8px;
       font-size: 22px;
       color: #4a4a4a;
   }
   .subtitle{
       font-weight: lighter;
       font-size: 16px;
+      margin-bottom: 20px;
   }
   /* Nav bar component */
   #nav-bar {
@@ -250,6 +255,7 @@ button {
   
 img {
       width: 30%;
+
     }
 .item-details {
       width: 70%;
@@ -257,14 +263,16 @@ img {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      
-      padding: 7px 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px 20px;
 } 
 .name {
         font-size: 16px;
+        
       }
 .price{
-    font-size: 12px;
+    font-size: 14px;
 }
 /* checkout component */
   
@@ -287,11 +295,16 @@ img {
   
 .header-block {
         text-transform: capitalize;
-        width: 23%;
+        width: 27%;
       }
 .header:last-child{
     width: 8%;
 }
+.total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
+  }
 /* checkoutItem component */
 .checkout-item {
     width: 100%;
@@ -320,7 +333,13 @@ img {
     }
   
     .quantity {
-      padding-left: 20px;
+      display: flex;
+    }
+    .arrow{
+        cursor: pointer;
+    }
+    .value{
+        margin: 0 10px;
     }
   
     .remove-button {
@@ -348,7 +367,7 @@ wrapper{
     text-align: center;
     margin: 80px 0px 40px 0px;
 }
-.name,
+.form-name,
 .email,
 .password{
     margin: 20px;

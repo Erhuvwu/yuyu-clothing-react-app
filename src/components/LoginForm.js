@@ -37,7 +37,7 @@ const LoginForm=({submitForm})=> {
                     <h2 className='form-title'>Create Account</h2>
                 </div>
                 <form className='form-wrapper'>
-                    <div className='name'>
+                    <div className='form-name'>
                         <label className='label'>Full Name</label>
                         <input  className='input' type='text' name='fullname' value={values.fullname} onChange={handleChange}/>
                          {errors.fullname && <p className='errors'>{errors.fullname}</p>}

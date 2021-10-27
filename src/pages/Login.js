@@ -1,12 +1,14 @@
-import React from 'react';
-import LoginForm from '../components/LoginForm';
+// import React from 'react';
+// import ListUsers from '../components/ListUsers';
+// import LoginForm from '../components/LoginForm';
 
-const Login=()=> {
-    return (
-        <div>
-            <LoginForm />
-        </div>
-    );
-}
+// const Login=(props)=> {
+//     return (
+//         <div>
+//             <ListUsers />
+//             {/* <LoginForm /> */}
+//         </div>
+//     );
+// }
 
-export default Login;
+// export default Login;

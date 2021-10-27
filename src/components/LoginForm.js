@@ -51,6 +51,7 @@ const LoginForm=({submitForm})=> {
                     </div>
                     <div>
                         <button className='submit' onClick={handleFormSubmit}>Sign up</button>
+                        {/* <button className='submit' onClick={handleFormCancel}>Cancel</button> */}
                     </div>
 
                 </form>

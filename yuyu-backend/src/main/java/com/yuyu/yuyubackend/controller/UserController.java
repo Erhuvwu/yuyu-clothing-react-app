@@ -36,6 +36,19 @@ public class UserController {
 		User user= userRepo.findById(id).orElseThrow(() ->  new ResourceNotFoundException("User not found"));
 		return ResponseEntity.ok(user);                 
 	}
+
+    @GetMapping("/user/{name}")
+	public List<User> getUserByName(@PathVariable String name)
+	{
+        List<User> users = userRepo.findByName(name);
+        if(users.isEmpty())
+		{
+			System.out.println(new ResourceNotFoundException("User(s) with the name "+ name +" not found"));
+		}
+		
+		return userRepo.findByName(name);
+		                
+	}
 	
 	@PostMapping("/adduser")
     public User newUser(@RequestBody User user)
